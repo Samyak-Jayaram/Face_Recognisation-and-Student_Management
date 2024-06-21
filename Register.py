@@ -122,14 +122,14 @@ class Register_GUI:
 
         # ================ Button ====================== #
 
-        img = Image.open(r"C:\Users\ashis\Desktop\Ashish\copy\AttendenceSystem1\college_images\register-now-button1.jpg")
-        img = img.resize((200,55),Image.ANTIALIAS)
+        img = Image.open(r"./college_images/register-now-button1.jpg")
+        img = img.resize((200,55),Image.Resampling.LANCZOS)
         self.photoimage = ImageTk.PhotoImage(img)
         b1 = Button(Register_frame,image=self.photoimage,command=self.register_data ,borderwidth=0, cursor="hand2",font=("times new roman",15, "bold"))
         b1.place(x= 50,y = 420,width =172)
 
-        img1 = Image.open(r"C:\Users\ashis\Desktop\Ashish\copy\AttendenceSystem1\college_images\login.png")
-        img1 = img1.resize((200,55),Image.ANTIALIAS)
+        img1 = Image.open(r"./college_images/login.png")
+        img1 = img1.resize((200,55),Image.Resampling.LANCZOS)
         self.photoimage1 = ImageTk.PhotoImage(img1)
         b2 = Button(Register_frame,image=self.photoimage1,borderwidth=0,command=self.login, cursor="hand2",font=("times new roman",15, "bold"))
         b2.place(x= 410,y = 420,width =200)

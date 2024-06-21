@@ -34,21 +34,21 @@ class Student:
 
 
         img1 = Image.open("./college_images/unnamed.jpg")
-        img1 = img1.resize((520, 130), Image.ANTIALIAS)
+        img1 = img1.resize((520, 130), Image.Resampling.LANCZOS)
         self.photoimg1 = ImageTk.PhotoImage(img1)
 
         f_lbl = Label(self.root, image=self.photoimg1)
         f_lbl.place(x=0, y=0, width=520, height=130)
 
         img2 = Image.open("./college_images/facialrecognition.png")
-        img2 = img2.resize((520, 130), Image.ANTIALIAS)
+        img2 = img2.resize((520, 130), Image.Resampling.LANCZOS)
         self.photoimg2 = ImageTk.PhotoImage(img2)
 
         f_lbl = Label(self.root, image=self.photoimg2)
         f_lbl.place(x=520, y=0, width=520, height=130)
 
         img3 = Image.open("./college_images/School.jpg")
-        img3 = img3.resize((500, 130), Image.ANTIALIAS)
+        img3 = img3.resize((500, 130), Image.Resampling.LANCZOS)
         self.photoimg3 = ImageTk.PhotoImage(img3)
 
         f_lbl = Label(self.root, image=self.photoimg3)
@@ -56,7 +56,7 @@ class Student:
 
         # bg image --->
         img4 = Image.open("./college_images/AIMT1.png")
-        img4 = img4.resize((1530, 710), Image.ANTIALIAS)
+        img4 = img4.resize((1530, 710), Image.Resampling.LANCZOS)
         self.photoimg4 = ImageTk.PhotoImage(img4)
 
         BG_img = Label(self.root, image=self.photoimg4)
@@ -76,7 +76,7 @@ class Student:
         Left_Frame.place(x=20, y=10, width=730, height=580)
 
         img_left = Image.open("./college_images/facialrecognition.png")
-        img_left = img_left.resize((520, 130), Image.ANTIALIAS)
+        img_left = img_left.resize((520, 130), Image.Resampling.LANCZOS)
         self.photoimg_left = ImageTk.PhotoImage(img_left)
 
         f_lbl = Label(Left_Frame, image=self.photoimg_left)
@@ -288,7 +288,7 @@ class Student:
 
         img_Right = Image.open(
             "./college_images/Team-Management-Software-Development.jpg")
-        img_Right = img_Right.resize((520, 130), Image.ANTIALIAS)
+        img_Right = img_Right.resize((520, 130), Image.Resampling.LANCZOS)
         self.photoimg_Right = ImageTk.PhotoImage(img_Right)
 
         f_lbl = Label(Right_Frame, image=self.photoimg_Right)
@@ -385,7 +385,7 @@ class Student:
         else:
             try:
                 conn = mysql.connector.connect(
-                    host="localhost", username="root", password="@Ashish12345", database="face_recognisation")
+                    host="localhost", username="root", password="Skaldro!!@173", database="face_recognisation")
                 my_cursor = conn.cursor()
                 my_cursor.execute("insert into student values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (
 
@@ -421,7 +421,7 @@ class Student:
 
     def fetch_data(self):
         conn = mysql.connector.connect(
-            host="localhost", username="root", password="@Ashish12345", database="face_recognisation")
+            host="localhost", username="root", password="Skaldro!!@173", database="face_recognisation")
 
         my_cursor = conn.cursor()
         my_cursor.execute("select * from student")
@@ -470,7 +470,7 @@ class Student:
                     "Update", "Do You Want to Update this student details", parent=self.root)
                 if update > 0:
                     conn = mysql.connector.connect(
-                        host="localhost", username="root", password="@Ashish12345", database="face_recognisation")
+                        host="localhost", username="root", password="Skaldro!!@173", database="face_recognisation")
                     my_cursor = conn.cursor()
                     
                     my_cursor.execute("update student set dep=%s,course=%s,year=%s,sem=%s,name=%s,roll=%s,gender=%s,dob=%s,email=%s,address=%s,phone=%s,Teacher=%s,PhotoSample=%s where student_id=%s", (
@@ -538,7 +538,7 @@ class Student:
                     "Student Delete Page ", "Do You want to Delete this Stdent details", parent=self.root)
                 if delete > 0:
                     conn = mysql.connector.connect(
-                        host="localhost", username="root", password="@Ashish12345", database="face_recognisation")
+                        host="localhost", username="root", password="Skaldro!!@173", database="face_recognisation")
                     my_cursor = conn.cursor()
                     sql = "delete from student where student_id=%s"
                     val = (self.var_id.get(),)
@@ -583,7 +583,7 @@ class Student:
         else:
             try:
                 conn = mysql.connector.connect(
-                    host="localhost", username="root", password="@Ashish12345", database="face_recognisation")
+                    host="localhost", username="root", password="Skaldro!!@173", database="face_recognisation")
                 my_cursor = conn.cursor()
                 my_cursor.execute("select * from student")
                 myresult = my_cursor.fetchall()
@@ -658,7 +658,7 @@ class Student:
     def search_data(self):
         pass
         conn = mysql.connector.connect(
-                    host="localhost", username="root", password="@Ashish12345", database="face_recognisation")
+                    host="localhost", username="root", password="Skaldro!!@173", database="face_recognisation")
         my_cursor=conn.cursor()
           
         my_cursor.execute("select * from student where "+str(self.search_by.get())+" LIKE '%"+str(self.search_txt.get())+"%'")

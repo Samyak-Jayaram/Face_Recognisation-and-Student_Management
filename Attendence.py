@@ -36,7 +36,7 @@ class attendance:
         # -----first Image
 
         img1 = Image.open(r"./college_images/bg.jpg")
-        img1 = img1.resize((800, 200), Image.ANTIALIAS)
+        img1 = img1.resize((800, 200), Image.Resampling.LANCZOS)
         self.photoimg1 = ImageTk.PhotoImage(img1)
 
         f_lb1 = Label(self.root, image=self.photoimg1)
@@ -45,7 +45,7 @@ class attendance:
         # 2nd Image
 
         img2 = Image.open(r"./college_images/dev.jpg")
-        img2 = img2.resize((800, 200), Image.ANTIALIAS)
+        img2 = img2.resize((800, 200), Image.Resampling.LANCZOS)
         self.photoimg2 = ImageTk.PhotoImage(img2)
 
         f_lb2 = Label(self.root, image=self.photoimg2)
@@ -55,7 +55,7 @@ class attendance:
 
         img4 = Image.open(
             r"./college_images/1_5TRuG7tG0KrZJXKoFtHlSg.jpeg")
-        img4 = img4.resize((1530, 790), Image.ANTIALIAS)
+        img4 = img4.resize((1530, 790), Image.Resampling.LANCZOS)
         self.photoimg4 = ImageTk.PhotoImage(img4)
 
         bg_img = Label(self.root, image=self.photoimg4)
@@ -80,7 +80,7 @@ class attendance:
 
         img_left = Image.open(
             r"./college_images/bg1.jpg")
-        img_left = img_left.resize((720, 130), Image.ANTIALIAS)
+        img_left = img_left.resize((720, 130), Image.Resampling.LANCZOS)
         self.photoimg_left = ImageTk.PhotoImage(img_left)
 
         bg_img_left = Label(Left_frame, image=self.photoimg_left)
@@ -91,7 +91,7 @@ class attendance:
         class_student_frame.place(x=5, y=80, width=700, height=385)
 
         img10 = Image.open(r"./college_images/university.jpg")
-        img10 = img10.resize((160, 140), Image.ANTIALIAS)
+        img10 = img10.resize((160, 140), Image.Resampling.LANCZOS)
         self.photoimg10 = ImageTk.PhotoImage(img10)
 
         bg_img10 = Label(self.root, image=self.photoimg10)
@@ -289,7 +289,7 @@ class attendance:
         img5 = Image.open("data/user."+str(self.var_email.get()) +
                           "."+str(self.var_email.get())+".jpg")
         file_name_path="data/user."+str(1)+"."+str(1)+".jpg"
-        img5 = img5.resize((160, 150), Image.ANTIALIAS)
+        img5 = img5.resize((160, 150), Image.Resampling.LANCZOS)
         self.photoimg5 = ImageTk.PhotoImage(img5)
 
         bg_img5 = Label(self.root, image=self.photoimg5)
@@ -305,7 +305,7 @@ class attendance:
         self.var_attendance.set("")
 
         img10 = Image.open(r"FACEIMAGES\cc2.png")
-        img10 = img10.resize((160, 140), Image.ANTIALIAS)
+        img10 = img10.resize((160, 140), Image.Resampling.LANCZOS)
         self.photoimg10 = ImageTk.PhotoImage(img10)
 
         bg_img10 = Label(self.root, image=self.photoimg10)

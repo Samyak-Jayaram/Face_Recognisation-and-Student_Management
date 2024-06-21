@@ -21,7 +21,7 @@ class train:
         #-----first Image
 
         img1=Image.open(r"./college_images/BestFacialRecognition.jpg")
-        img1=img1.resize((1530,400),Image.ANTIALIAS)
+        img1=img1.resize((1530,400),Image.Resampling.LANCZOS)
         self.photoimg1=ImageTk.PhotoImage(img1)
 
         f_lb1=Label(self.root,image=self.photoimg1)
@@ -31,7 +31,7 @@ class train:
         #-----second Image
 
         img2=Image.open(r"./college_images/facialrecognition.png")
-        img2=img2.resize((1530,450),Image.ANTIALIAS)
+        img2=img2.resize((1530,450),Image.Resampling.LANCZOS)
         self.photoimg2=ImageTk.PhotoImage(img2)
 
         f_lb2=Label(self.root,image=self.photoimg2)

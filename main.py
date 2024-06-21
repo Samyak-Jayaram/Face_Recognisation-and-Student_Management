@@ -18,21 +18,21 @@ class Attendence_System:
         self.root.title("Face Recognisation System")
 
         img1 = Image.open("./college_images/unnamed.jpg")
-        img1 = img1.resize((520, 130), Image.ANTIALIAS)
+        img1 = img1.resize((520, 130), Image.Resampling.LANCZOS)
         self.photoimg1 = ImageTk.PhotoImage(img1)
 
         f_lbl = Label(self.root, image=self.photoimg1)
         f_lbl.place(x=0, y=0, width=520, height=130)
 
         img2 = Image.open("./college_images/facialrecognition.png")
-        img2 = img2.resize((520, 130), Image.ANTIALIAS)
+        img2 = img2.resize((520, 130), Image.Resampling.LANCZOS)
         self.photoimg2 = ImageTk.PhotoImage(img2)
 
         f_lbl = Label(self.root, image=self.photoimg2)
         f_lbl.place(x=520, y=0, width=520, height=130)
 
         img3 = Image.open("./college_images/School.jpg")
-        img3 = img3.resize((500, 130), Image.ANTIALIAS)
+        img3 = img3.resize((500, 130), Image.Resampling.LANCZOS)
         self.photoimg3 = ImageTk.PhotoImage(img3)
 
         f_lbl = Label(self.root, image=self.photoimg3)
@@ -40,7 +40,7 @@ class Attendence_System:
 
         # bg image --->
         img4 = Image.open("./college_images/AIMT1.png")
-        img4 = img4.resize((1530, 710), Image.ANTIALIAS)
+        img4 = img4.resize((1530, 710), Image.Resampling.LANCZOS)
         self.photoimg4 = ImageTk.PhotoImage(img4)
 
         BG_img = Label(self.root, image=self.photoimg4)
@@ -59,7 +59,7 @@ class Attendence_System:
         ###########
         # Button Students---->
         img5 = Image.open("./college_images/56-565073_student-malefemale-student-portal-logo-png-transparent-png.png")
-        img5 = img5.resize((180, 180), Image.ANTIALIAS)
+        img5 = img5.resize((180, 180), Image.Resampling.LANCZOS)
         self.photoimg5 = ImageTk.PhotoImage(img5)
 
         b1 = Button(BG_img, cursor="hand2",command=self.student_details, image=self.photoimg5)
@@ -71,7 +71,7 @@ class Attendence_System:
 
         # Detect_face Button ------->
         img6 = Image.open("./college_images/face_detector1.jpg")
-        img6 = img6.resize((180, 180), Image.ANTIALIAS)
+        img6 = img6.resize((180, 180), Image.Resampling.LANCZOS)
         self.photoimg6 = ImageTk.PhotoImage(img6)
 
         b1 = Button(BG_img, cursor="hand2",command=self.face_data, image=self.photoimg6)
@@ -82,7 +82,7 @@ class Attendence_System:
 
         # Attendence face System ------->
         img7 = Image.open("./college_images/smart-attendance.jpg")
-        img7 = img7.resize((180, 180), Image.ANTIALIAS)
+        img7 = img7.resize((180, 180), Image.Resampling.LANCZOS)
         self.photoimg7 = ImageTk.PhotoImage(img7)
 
         b1 = Button(BG_img,cursor="hand2",command=self.attendance_data, image=self.photoimg7)
@@ -93,7 +93,7 @@ class Attendence_System:
         
         # Help Desk System ------->
         img8 = Image.open("./college_images/help-desk-customer-care-team-icon-blue-square-button-isolated-reflected-abstract-illustration-89657179.jpg")
-        img8 = img8.resize((180, 180), Image.ANTIALIAS)
+        img8 = img8.resize((180, 180), Image.Resampling.LANCZOS)
         self.photoimg8 = ImageTk.PhotoImage(img8)
 
         b1 = Button(BG_img,cursor="hand2", image=self.photoimg8)
@@ -104,7 +104,7 @@ class Attendence_System:
 
         # train face System ------->
         img9 = Image.open("./college_images/Train.jpg")
-        img9 = img9.resize((180, 180), Image.ANTIALIAS)
+        img9 = img9.resize((180, 180), Image.Resampling.LANCZOS)
         self.photoimg9 = ImageTk.PhotoImage(img9)
 
         b1 = Button(BG_img,cursor="hand2",command=self.train_data, image=self.photoimg9)
@@ -115,7 +115,7 @@ class Attendence_System:
 
         # Photos ------->
         img11 = Image.open("./college_images/employee_img2.jpg")
-        img11 = img11.resize((180, 180), Image.ANTIALIAS)
+        img11 = img11.resize((180, 180), Image.Resampling.LANCZOS)
         self.photoimg11 = ImageTk.PhotoImage(img11)
 
         b1 = Button(BG_img,cursor="hand2", image=self.photoimg11, command=self.open_img)
@@ -126,7 +126,7 @@ class Attendence_System:
 
         # developer System ------->
         img10 = Image.open("./college_images/dev.jpg")
-        img10 = img10.resize((180, 180), Image.ANTIALIAS)
+        img10 = img10.resize((180, 180), Image.Resampling.LANCZOS)
         self.photoimg10 = ImageTk.PhotoImage(img10)
 
         b1 = Button(BG_img,cursor="hand2", image=self.photoimg10)
@@ -138,7 +138,7 @@ class Attendence_System:
 
         # Exit ------->
         img12 = Image.open("./college_images/exit.jpg")
-        img12 = img12.resize((180, 180), Image.ANTIALIAS)
+        img12 = img12.resize((180, 180), Image.Resampling.LANCZOS)
         self.photoimg12 = ImageTk.PhotoImage(img12)
 
         b1 = Button(BG_img,cursor="hand2", image=self.photoimg12, command=self.iExit)
